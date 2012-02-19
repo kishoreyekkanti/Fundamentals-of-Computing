@@ -18,7 +18,7 @@ public class AlgorithmHelper {
 	public static int getRandomNumber()
 	{
 		Random random = new Random();
-		int num = random.nextInt(10);
+		int num = random.nextInt(100);
 		return num;
 	} 
 

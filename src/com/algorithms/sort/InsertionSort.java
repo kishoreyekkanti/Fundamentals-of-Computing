@@ -13,12 +13,12 @@ public class InsertionSort implements Sorter{
 		int[] sortedArray = inputArray;
 		for (int i = 1; i < length; i++){
 			int j = i;
-			int B = sortedArray[i];
-			while ((j > 0) && (sortedArray[j-1] > B)){
+			int b = sortedArray[i];
+			while ((j > 0) && (sortedArray[j-1] > b)){
 				sortedArray[j] = sortedArray[j-1];
 				j--;
 			}
-			sortedArray[j] = B;
+			sortedArray[j] = b;
 		}
 		return sortedArray;
 	}	
