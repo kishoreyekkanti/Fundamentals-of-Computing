@@ -1,13 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Hello World, MyActivity"
-    />
-</LinearLayout>
+    android:orientation="vertical" > 
 
+    <Button
+        android:id="@+id/converter"
+        android:layout_width="120dp"        
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+         android:textColor="@color/black_color"         
+        android:cropToPadding="true"
+        android:layout_weight="1"
+        android:background="@drawable/numberconversion"
+        /> 
+    
+    <com.example.ScrollingTextView
+        android:id="@+id/marquee_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/converter_marquee" />
+
+    <Button
+        android:id="@+id/sorter"
+        android:layout_width="120dp"        
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black_color"
+        android:layout_weight="1"
+        android:background="@drawable/sorting"
+        />
+
+    <com.example.ScrollingTextView
+        android:id="@+id/marquee_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/sorter_marquee" />
+
+    <Button
+        android:id="@+id/searcher"
+        android:layout_width="120dp"        
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black_color"
+        android:layout_weight="1"
+        android:background="@drawable/searching"
+        />
+
+    <com.example.ScrollingTextView
+        android:id="@+id/marquee_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/searcher_marquee" />
+
+    <Button
+        android:id="@+id/gates"
+        android:layout_width="120dp"        
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black_color"
+        android:layout_weight="1"
+        android:background="@drawable/logicgates"
+        />
+
+    <com.example.ScrollingTextView
+        android:id="@+id/marquee_gates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dip"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/gates_marquee" />
+
+</LinearLayout>

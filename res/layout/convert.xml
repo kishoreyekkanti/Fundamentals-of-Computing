@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+<LinearLayout 
+    android:id="@+id/toolbar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" >
+    
+	<Button  android:id="@+id/ConverttoHome" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/home"/>
+    <Button android:id="@+id/convertermenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/system_binary" android:enabled="false" />
+    <Button android:id="@+id/sortermenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/sort"/>
+    <Button android:id="@+id/searchmenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/search"/>
+    <Button android:id="@+id/gatesmenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/pcb"/>        
+    <Button android:id="@+id/quitmenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/quit"/>
+    <Button android:id="@+id/helpmenu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:background="@drawable/question"/>        
+    
+</LinearLayout>
+
+<RelativeLayout android:id="@+id/body"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/numbersystem_prompt" 
+            />
+    <EditText android:id="@+id/converterInputValue" android:layout_height="wrap_content" android:layout_width="200dp"  android:layout_toRightOf="@id/spinner" android:inputType="number" />
+
+    <Button android:id="@+id/base2help" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/spinner"  android:layout_marginTop="2dp"  android:text="@string/e_label" android:background="@drawable/help"/>
+    <Button android:id="@+id/base4help" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base2"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/help"/>
+    <Button android:id="@+id/base8help" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base4"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/help"/>
+    <Button android:id="@+id/base10help" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base8"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/help"/>
+    <Button android:id="@+id/base16help" android:layout_width="20dp"  android:layout_height="20dp" android:layout_below="@+id/base10"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/help"/>    
+    
+    <TextView android:id="@+id/base2" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/spinner"  android:layout_marginTop="2dp"  android:text="@string/binary_label" android:layout_toRightOf="@+id/base2help"/>
+    <TextView android:id="@+id/base4" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/base2"  android:layout_marginTop="2dp"  android:text="@string/quaternary_label" android:layout_toRightOf="@+id/base4help"/>
+    <TextView android:id="@+id/base8" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/base4"  android:layout_marginTop="2dp"  android:text="@string/octal_label" android:layout_toRightOf="@+id/base8help"/>
+    <TextView android:id="@+id/base10" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/base8"  android:layout_marginTop="2dp"  android:text="@string/decimal_label" android:layout_toRightOf="@+id/base10help"/>
+    <TextView android:id="@+id/base16" android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_below="@+id/base10"  android:layout_marginTop="2dp"  android:text="@string/hexadecimal_label" android:layout_toRightOf="@+id/base16help"/>
+    
+    <TextView android:id="@+id/base2value" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/converterInputValue" android:layout_marginTop="2dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/base2explain"/>
+    <TextView android:id="@+id/base4value" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/base2value" android:layout_marginTop="2dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/base4explain"/>
+    <TextView android:id="@+id/base8value" android:layout_width="wrap_content"  android:layout_height="wrap_content"  android:layout_below="@+id/base4value" android:layout_marginTop="2dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/base8explain"/>
+    <TextView android:id="@+id/base10value" android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_below="@+id/base8value" android:layout_marginTop="2dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/base10explain"/>
+    <TextView android:id="@+id/base16value" android:layout_width="wrap_content"  android:layout_height="wrap_content" android:layout_below="@+id/base10value" android:layout_marginTop="2dp" android:layout_marginLeft="80dp" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/base16explain"/>
+    
+    <Button android:id="@+id/base2explain" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/spinner"  android:layout_marginTop="2dp"  android:text="@string/e_label" android:background="@drawable/explain" android:layout_alignParentRight="true" />
+    <Button android:id="@+id/base4explain" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base2"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/explain" android:layout_alignParentRight="true"  />
+    <Button android:id="@+id/base8explain" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base4"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/explain" android:layout_alignParentRight="true"  />
+    <Button android:id="@+id/base10explain" android:layout_width="20dp"  android:layout_height="20dp"  android:layout_below="@+id/base8"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/explain" android:layout_alignParentRight="true"  />
+    <Button android:id="@+id/base16explain" android:layout_width="20dp"  android:layout_height="20dp" android:layout_below="@+id/base10"  android:layout_marginTop="2dp"  android:text="@string/e_label"  android:background="@drawable/explain" android:layout_alignParentRight="true"  />
+    
+    <WebView 
+        android:id="@+id/webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base16"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+    />    
+    
+    
+</RelativeLayout>
+</LinearLayout>

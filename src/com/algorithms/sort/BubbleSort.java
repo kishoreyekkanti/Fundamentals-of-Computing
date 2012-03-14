@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class BubbleSort implements Sorter{
+public class BubbleSort implements ISorter{
 
 	@Override  
 	public String sortType()
@@ -22,6 +22,21 @@ public class BubbleSort implements Sorter{
 			}
 		}
 		return sortedArray;
+	}
+
+	@Override
+	public String bestComplexity() {
+		return "O(n)";
+	}
+
+	@Override
+	public String averageComplexity() {
+		return "O(n2)";
+	}
+
+	@Override
+	public String worstComplexity() {
+		return "O(n2)";
 	}	
 
 }

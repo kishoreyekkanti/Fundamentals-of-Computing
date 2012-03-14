@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class MergeSort implements Sorter{
+public class MergeSort implements ISorter{
 
 	@Override  
 	public String sortType()
@@ -41,6 +41,21 @@ public class MergeSort implements Sorter{
 			}
 		}
 		return array;
+	}
+
+	@Override
+	public String bestComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String averageComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String worstComplexity() {
+		return "O(n log n)";
 	}		
 
 }

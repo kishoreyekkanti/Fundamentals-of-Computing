@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class QuickSort implements Sorter{
+public class QuickSort implements ISorter{
 
 
 	@Override
@@ -42,6 +42,21 @@ public class QuickSort implements Sorter{
 		sort(array, low, lo);
 		sort(array, lo == low ? lo+1 : lo, n);
 		return array;
+	}
+
+	@Override
+	public String bestComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String averageComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String worstComplexity() {
+		return "O(n2)";
 	}	
 
 }

@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class InsertionSort implements Sorter{
+public class InsertionSort implements ISorter{
 
 	@Override  
 	public String sortType()
@@ -21,6 +21,21 @@ public class InsertionSort implements Sorter{
 			sortedArray[j] = b;
 		}
 		return sortedArray;
+	}
+
+	@Override
+	public String bestComplexity() {
+		return "O(n)";
+	}
+
+	@Override
+	public String averageComplexity() {
+		return "O(n2)";
+	}
+
+	@Override
+	public String worstComplexity() {
+		return "O(n<sup>2</sup>)";
 	}	
 
 }

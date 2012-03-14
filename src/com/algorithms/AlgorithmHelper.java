@@ -25,6 +25,20 @@ public class AlgorithmHelper {
 	public static long getCurrentTimeInMillisecs(){
 		Calendar cal = Calendar.getInstance();
 		return cal.getTimeInMillis();
+	}
+	
+	public static String getInputString(int[] inputArray){
+		String inputString = "";
+		int[] inputIntArray = inputArray;
+		for(int i=0; i<inputIntArray.length; i++){
+			if(i==0)
+			{
+				inputString = ""+inputIntArray[i];
+			}
+			else
+			inputString = inputString + "," + inputIntArray[i];
+		}
+		return inputString;
 	}	
 
 }

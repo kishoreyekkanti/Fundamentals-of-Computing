@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class BidirectionalBubbleSort implements Sorter {
+public class BidirectionalBubbleSort implements ISorter {
 
 	@Override
 	public String sortType()
@@ -32,6 +32,24 @@ public class BidirectionalBubbleSort implements Sorter {
 			}
 		}
 		return sortedArray;
+	}
+
+	@Override
+	public String bestComplexity() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String averageComplexity() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String worstComplexity() {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 
 }

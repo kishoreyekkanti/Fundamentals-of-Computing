@@ -1,6 +1,6 @@
 package com.algorithms.sort;
 
-public class HeapSort implements Sorter{
+public class HeapSort implements ISorter{
 
 	@Override  
 	public String sortType()
@@ -50,5 +50,20 @@ public class HeapSort implements Sorter{
 		array[0] = array[arr_ubound];
 		array[arr_ubound] = temp;
 		return array;
+	}
+
+	@Override
+	public String bestComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String averageComplexity() {
+		return "O(n log n)";
+	}
+
+	@Override
+	public String worstComplexity() {
+		return "O(n log n)";
 	}
 }
